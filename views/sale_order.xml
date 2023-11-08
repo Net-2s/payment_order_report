@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record id="payment_order_sale_form_view" model="ir.ui.view">
+            <field name="name">payment order sale form view</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                    <field name="code_operator"/>
+                    <field name="imputation"/>
+                    <field name="fiscal_year"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
