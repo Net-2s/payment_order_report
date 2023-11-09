@@ -2,244 +2,267 @@
 <odoo>
     <template id="payment_order_report_document">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
-        <style>
+        <!--<style>
             .o_report_layout_standard .body {
-                font-family: 'Open Sans', sans-serif; font-size: 12px;
-                color: #363636;
-                box-sizing: border-box;
-                max-width: 800px;
-                margin: 0 auto;
+            font-family: 'Open Sans', sans-serif; font-size: 12px;
+            color: #363636;
+            box-sizing: border-box;
+            max-width: 800px;
+            margin: 0 auto;
             }
             .page{
-                text-align: center;
-                padding: 5px;
-                border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid black;
             }
             .header{
-                font-weight: bold;
-                font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            font-family: 'Open Sans', sans-serif;
             }
             .image {
-                height: 50px;
-                width: 50px;
-                margin: 2px;
-                margin-left: -35px;
+            height: 50px;
+            width: 50px;
+            margin: 2px;
+            margin-left: -35px;
             }
             .adresse__2 tr td {
-                margin: 2px;
-                font-size: medium;
-                margin-top: 20px;
+            margin: 2px;
+            font-size: medium;
+            margin-top: 20px;
             }
             .adresse__2 {
-                margin-left: 400px;
-                font-weight: bold;
+            margin-left: 400px;
+            font-weight: bold;
             }
             .table__header {
-                background-color: #008000;
-                color: white;
+            background-color: #008000;
+            color: white;
             }
             .table__header th {
-                padding: 0.5rem 0.5rem;
-                text-align: left;
+            padding: 0.5rem 0.5rem;
+            text-align: left;
             }
             .align__right {
-                text-align: right !important;
+            text-align: right !important;
             }
             .align__left {
-                text-align: left !important;
+            text-align: left !important;
             }
             .paragraph {
-                font-size: 14px;
-                margin: 5px;
-                color: black;
-                align-items: center;
-                justify-content: center;
-                text-justify: none;
-                position: relative;
+            font-size: 14px;
+            margin: 5px;
+            color: black;
+            align-items: center;
+            justify-content: center;
+            text-justify: none;
+            position: relative;
             }
-        </style>
+        </style>-->
         <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)"/>
-        <div class="page">
-            <div class="header" t-att-style="report_header_style" style="position:absolute;top:0;">
-            <div class="row zero_min_height">
-                <img class="image" src="/energy_sale_order_report/static/description/logo.png"
-                     alt="Image is not loading"
-                     style="height: 120px; width: 150px;margin-left:40px;"/>
-            </div>
-            <div class="row zero_min_height">
-                <img class="image" src="/energy_sale_order_report/static/description/logo.png"
-                     alt="Image is not loading"
-                     style="height: 120px; width: 150px;margin-left:40px;" align="right"/>
-            </div>
-            <table class="adresse__2" cellspacing="0" style="margin-right:120px;font-weight:bold;" align="right">
-                <tr style="border: 2px solid black;">
-                    <td style="margin: 2px;font-size: medium;margin-top: 16px; text-transform: uppercase;">
-                        ordonnance de paiement N°:
-                        <span></span>
-                    </td>
-                </tr>
-                <tr style="border: 2px solid black;">
-                    <td style="margin: 2px;font-size: medium;margin-top: 16px; text-transform: uppercase;">
-                        exercice budgetaire:
-                        <span></span>
-                    </td>
-                </tr>
-            </table>
-        </div>
-            <div t-attf-class="article o_report_layout_standard" style="position:absolute;top: 100px">
-            <t t-out="0"/>
-            <div class="body"
-                 style="font-family: 'Open Sans', sans-serif;font-size: 12px;clear: both;color:#363636;box-sizing:border-box;max-width: 800px;margin-left:35px">
-                <table class="">
-                    <thead  style="text-align: center; padding: 0.5rem 0.5rem;height: 22px;width: 100%; color: black;font-size: 15px;">
-                        <th> CODE OPERATEUR </th>
-                        <th> IMPUTATION </th>
-                        <th> TITRE </th>
-                    </thead>
-                    <tbody>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                    </tbody>
-<!--                    <th/>-->
-                </table>
-                <table class="" style="margin-right: 14px; width:100%;">
-                     <thead  style="text-align: center; padding: 0.5rem 0.5rem;height: 22px;width: 100%; color: black;font-size: 15px;">
-                        <tr>
-                            <th> NATURE </th>
-                            <th colspan="2"> DESCRIPTION DE LA DEPENSE </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-
-                        </td>
-                        <td colspan="2">
-
-                        </td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">
-                                REFERENCE DU BENEFICIAIRE
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                GABON MECA
-                            </td>
-                            <td>
-                                N° STAT:
-                            </td>
-                            <td>
-                                NIF:
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="" cellspacing="0" style="width: 100%;">
-                    <thead>
-                        <tr style="width:15%;padding: 0.5rem 0.5rem;text-align: right !important;">
-                            <th colspan="3">REFERENCES DE LA DEPENSE </th>
-                        </tr>
-                        <tr style="width:15%;padding: 0.5rem 0.5rem;text-align: right !important;">
-                            <th>DATE </th>
-                            <th> NUMERO </th>
-                            <th> MONTANT </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="" style="font-size:11px;text-align: left;width:25%;padding: 0.5rem 0.5rem;border-bottom: 1.25px solid black;">
-                            <td>
-<!--                                <span t-field=""/>-->
-                            </td>
-                            <td>
-<!--                                <span t-field=""/>-->
-                            </td>
-                            <td>
-<!--                                <span t-field=""/>-->
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="" cellspacing="0" style="width: 100%;">
-                    <thead>
-                        <tr style="width:15%;padding: 0.5rem 0.5rem;text-align: right !important;">
-                            <th colspan="3">REFERENCES DU REGLEMENT </th>
-                        </tr>
-                        <tr style="width:15%;padding: 0.5rem 0.5rem;text-align: right !important;">
-                            <th>MODE DE REGLEMENT </th>
-                            <th> DOMICILIATION </th>
-                            <th> RELEVE D'IDENTITE BANCAIRE </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="" style="font-size:11px;text-align: left;width:25%;padding: 0.5rem 0.5rem;border-bottom: 1.25px solid black;">
-                            <td>
-<!--                                <span t-field=""/>-->
-                            </td>
-                            <td>
-<!--                                <span t-field=""/>-->
-                            </td>
-                            <td>
-<!--                                <span t-field=""/>-->
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="adress" cellspacing="0" style="margin-top: 10px;width: 100%;;">
-                    <tr style="margin-bottom: 30px;">
-                        <td  colspan="2">
-                            <div class="bloc1" style="width:200px;font-weight: bold;font-size:13px;margin-bottom:5px;">
-                                <span>LA PRESENTE ORDONNANCE, ASSIGNEE PAYABLE A L'AGENCE COMPTABLE DES HOPITAUX PUBLICS
-                                        DE LIBREVILLE EST ARRETEE EN FCFA LA SOMME DE: </span>
-                                <span> MONTANT EN LETTRE</span>
-                                <span> LIBREVILLE, LE</span>
-                            </div>
+        <div class="page" style="border: 1px solid red; width:100%; height: 100%;">
+            <div class="header" t-att-style="report_header_style" style="width:100%; height: 35%; border: 1px solid red;">
+               <div class="oe_inline" style="display: inline;">
+                    <table align="left">
+                        <img class="image" src="/energy_sale_order_report/static/description/logo.png"
+                             alt="Image is not loading" style="height: 150px; width: 150px;"/>
+                        <br/>
+                        <span>DIRECTION GENERAL</span>
+                        <br/>
+                        <span>DIRECTION FINANCIERE</span>
+                    </table>
+<!--                    <table align="right">-->
+<!--                        <img class="image" src="/energy_sale_order_report/static/description/logo.png"-->
+<!--                             alt="Image is not loading" style="height: 150px; width: 150px;"/>-->
+<!--                        <br/>-->
+<!--                        <span>MINISTERE DE LA SANTE ET</span><br/>-->
+<!--                        <span>DES AFFAIRES SOCIALES</span>-->
+<!--                    </table>-->
+               </div>
+                <table cellspacing="5" style="font-weight:bold; margin:10px;" align="right">
+                    <tr style="border: 2px solid red;">
+                        <td style="padding: 10px;font-size: medium; text-transform: uppercase; height: 35px;">
+                            ordonnance de paiement N°:
+                            <span>OP0001</span>
                         </td>
                     </tr>
-                    <tr style="margin-bottom: 30px;">
-                        <td>
-                            <div class="" style="">
-                                <span>Visé le: </span>
-                                <span> LE DIRECTEUR FINANCIER</span>
-                                <span> </span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="" style="">
-                                <span>Visé le: </span>
-                                <span> LE DIRECTEUR GENERAL</span>
-                                <span> </span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr style="margin-bottom: 30px;">
-                        <td>
-                            <div class="" style="">
-                                <span>Visé le: </span>
-                                <span> LE CONTROLEUR BUDGETAIRE DES HOPITAUX PUBLICS DE LIBREVILLE</span>
-                                <span> </span>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="" style="">
-                                <span>Fait à Libreville le: </span>
-                                <span>Par: </span>
-                                <span> L'AGENT COMPTABLE DES HOPITAUX PUBLICS DE LIBREVILLE</span>
-                                <span> </span>
-                            </div>
+                    <tr style="border: 2px solid red;">
+                        <td style="padding: 10px;font-size: medium; text-transform: uppercase; height: 35px;">
+                            exercice budgetaire:
+                            <span>2023</span>
                         </td>
                     </tr>
                 </table>
             </div>
-        </div>
+            <div t-attf-class="article o_report_layout_standard" style="position:absolute;top: 150px; font-size: 14px;">
+                <t t-out="0"/>
+                <div class="body"
+                     style="font-family: 'Open Sans', sans-serif;font-size: 14px;;clear: both;color:#363636;box-sizing:border-box;max-width: 100%;margin-left:15px">
+                    <table cellspacing="1" style="width: 900px; margin: 20px;" align="center">
+                        <thead style="text-align: center; padding: 0.5rem 0.5rem;">
+                            <th style="border: 2px solid red; width: 20%; height: 35px;">CODE OPERATEUR</th>
+                            <th style="border: 2px solid red; width: 20%; height: 35px;">IMPUTATION</th>
+                            <th style="border: 2px solid red; width: 60%; height: 35px;">TITRE</th>
+                        </thead>
+                        <tbody>
+                            <td style="border: 2px solid red; height: 35px;">
+                                40 636 D1K1
+                            </td>
+                            <td style="border: 2px solid red; height: 35px;">
+                                91 40v 836 1 3
+                            </td>
+                            <td style="border: 2px solid red; height: 35px;">
+                                TITRE 3 : DEPENSES DE BIENS ET SERVICES
+                            </td>
+                        </tbody>
+                    </table>
+                    <table cellspacing="1" style="width: 900px; margin: 20px;" align="center">
+                        <thead style="text-align: center; padding: 0.5rem 0.5rem;">
+                            <tr>
+                                <th style="border: 2px solid red; height: 35px;">NATURE</th>
+                                <th colspan="2" style="border: 2px solid red; height: 35px;">DESCRIPTION DE LA DEPENSE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="text-align: center;">
+                                <td style="border: 2px solid red; height: 35px;">
+                                    601107
+                                </td>
+                                <td colspan="2" style="border: 2px solid red; height: 35px;">
+                                    Fournitures de bureau diverses
+                                </td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td colspan="3" style="border: 2px solid red; height: 35px;">
+                                    REFERENCE DU BENEFICIAIRE
+                                </td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td style="border: 2px solid red; height: 35px;">
+                                    GABON MECA
+                                </td>
+                                <td style="border: 2px solid red; height: 35px;">
+                                    N° STAT:
+                                </td>
+                                <td style="border: 2px solid red; height: 35px;">
+                                    NIF: 790131L
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="1" style="width: 900px; margin: 20px;" align="center">
+                        <thead style="text-align: center;">
+                            <tr style="text-align: center;">
+                                <th colspan="3" style="border: 2px solid red;  height: 35px;" >REFERENCES DE LA DEPENSE</th>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <th style="border: 2px solid red;  height: 35px;"  >DATE</th>
+                                <th style="border: 2px solid red;  height: 35px;" >NUMERO</th>
+                                <th style="border: 2px solid red;  height: 35px;" >MONTANT</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;">
+                            <tr>
+                                <td style="border: 2px solid red;  height: 35px;">26/06/2023
+                                    <!--                                <span t-field=""/>-->
+                                </td>
+                                <td style="border: 2px solid red;  height: 35px;">N°DC545436
+                                    <!--                                <span t-field=""/>-->
+                                </td>
+                                <td style="border: 2px solid red;  height: 35px;">3 000 000 FCFA
+                                    <!--                                <span t-field=""/>-->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="1" style="width: 900px; margin: 20px;" align="center">
+                        <thead style="text-align: center; padding: 0.5rem 0.5rem;">
+                            <tr>
+                                <th colspan="3" style="border: 2px solid red; height: 35px;">REFERENCES DU REGLEMENT</th>
+                            </tr>
+                            <tr>
+                                <th style="border: 2px solid red; height: 35px;">MODE DE REGLEMENT</th>
+                                <th style="border: 2px solid red; height: 35px;">DOMICILIATION</th>
+                                <th style="border: 2px solid red; height: 35px;">RELEVE D'IDENTITE BANCAIRE</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center; padding: 0.5rem 0.5rem;">
+                            <tr>
+                                <td style="border: 2px solid red; height: 35px;"> VIREMENT
+                                    <!--                                <span t-field=""/>-->
+                                </td>
+                                <td style="border: 2px solid red; height: 35px;">UGB
+                                    <!--                                <span t-field=""/>-->
+                                </td>
+                                <td style="border: 2px solid red; height: 35px;">40002 00005 56070723500 19
+                                    <!--                                <span t-field=""/>-->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="1" style="width: 900px; margin: 20px;" align="center">
+                        <tr>
+                            <td colspan="2"  style="border: 2px solid red; height: 110px;">
+                                <div>
+                                    <span style="margin: 10px; font-weight: bold;">LA PRESENTE ORDONNANCE, ASSIGNEE PAYABLE A L'AGENCE COMPTABLE DES HOPITAUX
+                                        PUBLICS
+                                        DE LIBREVILLE EST ARRETEE EN FCFA LA SOMME DE:
+                                    </span>
+                                    <br/>
+                                    <br/>
+                                    <span  align="center" style="font-weight: bold;">MONTANT EN LETTRE</span>
+                                    <br/>
+                                    <br/>
+                                    <span align="center">LIBREVILLE, LE</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 2px solid red; height: 110px;">
+                                <div>
+                                    <span style="margin: 10px;">Visé le:</span>
+                                    <span align="center" style="font-weight: bold;">LE DIRECTEUR FINANCIER</span>
+                                    <br/><br/>
+                                    <br/><br/>
+                                    <span align="center" style="font-weight: bold;">SIMO KOUAM LARISSA</span>
+                                </div>
+                            </td>
+                            <td style="border: 2px solid red; height: 110px;">
+                                <div>
+                                    <span style="margin: 10px;">Visé le:</span>
+                                    <span align="center" style="font-weight: bold;">LE DIRECTEUR GENERAL</span>
+                                    <br/><br/>
+                                    <br/><br/>
+                                    <span align="center" style="font-weight: bold;">SIMO KOUAM LARISSA</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="margin-bottom: 35px;">
+                            <td style="border: 2px solid red; height: 110px;">
+                                <div class="" style="">
+                                    <span style="margin: 10px;">Visé le:</span>
+                                    <span align="center" style="font-weight: bold;">LE CONTROLEUR BUDGETAIRE DES HOPITAUX PUBLICS DE LIBREVILLE</span>
+                                    <br/><br/>
+                                    <br/><br/>
+                                    <span align="center" style="font-weight: bold;">SIMO KOUAM LARISSA</span>
+                                </div>
+                            </td>
+                            <td style="border: 2px solid red; height: 110px;">
+                                <div>
+                                    <span style="margin: 10px;">Fait à Libreville le:</span>
+                                    <br/>
+                                    <span style="margin: 10px;">Par:</span>
+                                    <br/>
+                                    <span align="center" style="font-weight: bold;">L'AGENT COMPTABLE DES HOPITAUX PUBLICS DE LIBREVILLE</span><br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <span align="center" style="font-weight: bold;">SIMO KOUAM LARISSA</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </template>
 
