@@ -3,7 +3,7 @@
     <data>
 
         <record id="action_payment_order_report" model="ir.actions.report">
-            <field name="name">Payment Order</field>
+            <field name="name">Ordonnance de Paiement</field>
             <field name="model">account.move</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">payment_order_report.payment_order_report</field>

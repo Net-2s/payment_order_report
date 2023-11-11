@@ -132,8 +132,8 @@
                                 <td style="border-top: 2px solid red; border-bottom: 2px solid red; height: 30px; text-transform:uppercase;">
                                     <span t-field="doc.invoice_line_ids[0].sale_line_ids.order_id.payment_method"/>
                                 </td>
-                                <td style="border-top: 2px solid red; border-bottom: 2px solid red; border-left: 2px solid red; height: 30px;">UGB
-<!--                                    <span t-field="doc.invoice_line_ids[0].product_id.payment_method"/>-->
+                                <td style="border-top: 2px solid red; border-bottom: 2px solid red; border-left: 2px solid red; height: 30px;">
+                                    <span t-field="doc.partner_id.bank_ids.bank_id"/>
                                 </td>
                                 <td style="border-top: 2px solid red; border-bottom: 2px solid red; border-left: 2px solid red; border-left: 2px solid red; height: 30px;">
                                     <span t-field="doc.partner_id.bank_account"/>
