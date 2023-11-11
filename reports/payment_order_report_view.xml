@@ -8,7 +8,7 @@
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">payment_order_report.payment_order_report</field>
             <field name="report_file">payment_order_report.payment_order_report</field>
-            <field name="print_report_name">(object._get_report_base_filename())</field>
+            <field name="print_report_name">'Ordonnance_de_paiement -  %s' % (object._compute_sequence_number())</field>
             <field name="binding_model_id" ref="account.model_account_move"/>
             <field name="binding_type">report</field>
         </record>

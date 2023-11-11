@@ -7,4 +7,14 @@ class ResPartner(models.Model):
 
     fiscal_num = fields.Char(string="NIF", track_visibility='onchange')
     stat_num = fields.Char(string="N° STAT", track_visibility='onchange')
-    bank_account = fields.Integer(string='Bank account', required=True, track_visibility='onchange')
+    bank_account = fields.Char(string='Bank account', required=True, track_visibility='onchange')
+
+    @api.onchange('bank_account')
+    def update_bank_ids(self):
+        for partner in self:
+            if partner.bank_account:
+                partner.bank_ids = [(0, 0, {
+                    'acc_number': partner.bank_account,
+                    # Include other relevant fields for the res.partner.bank model
+                })]
+

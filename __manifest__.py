@@ -21,6 +21,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
+        'data/ir_payment_order_sequence.xml',
         'views/sale_order.xml',
         'views/res_partner.xml',
         'reports/payment_order_report_template.xml',

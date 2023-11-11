@@ -11,6 +11,9 @@
                     <field name="imputation"/>
                     <field name="fiscal_year"/>
                 </xpath>
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="payment_method"/>
+                </xpath>
             </field>
         </record>
     </data>
