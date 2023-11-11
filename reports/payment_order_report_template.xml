@@ -150,6 +150,7 @@
                                         DE LIBREVILLE EST ARRETEE EN FCFA LA SOMME DE:
                                     </span>
                                     <br/>
+                                    <br/>
                                     <span style="font-weight: bold; display: block; text-align: center;" t-esc="doc.convert_amount_to_words(doc.amount_total)"/>
                                     <br/>
                                     <span style="display: block; text-align: center;">
@@ -164,6 +165,7 @@
                                     <span style="margin: 15px; font-weight: bold;">Visé le:</span>
                                     <span style="font-weight: bold; display: block; text-align: center;">LE DIRECTEUR FINANCIER</span>
                                     <br/>
+                                    <br/>
                                     <span style="font-weight: bold; display: block; text-align: center;">Steffen Martin BONGO MBOU</span>
                                 </div>
                             </td>
@@ -171,6 +173,7 @@
                                 <div>
                                     <span style="margin: 15px; font-weight: bold;">Visé le:</span>
                                     <span style="font-weight: bold; display: block; text-align: center;">LE DIRECTEUR GENERAL</span>
+                                    <br/>
                                     <br/>
                                     <span style="font-weight: bold; display: block; text-align: center;">DR.M.T.VANE NDONG OBIANG</span>
                                 </div>
@@ -192,7 +195,7 @@
                                     <br/>
                                     <span style="margin: 15px;">Par:</span>
                                     <br/>
-                                    <span style="font-weight: bold; display: block; text-align: center;">L'AGENT COMPTABLE DES HOPITAUX PUBLICS DE LIBREVILLE</span><br/>
+                                    <span style="font-weight: bold; display: block; text-align: center;">L'AGENT COMPTABLE DES HOPITAUX PUBLICS DE LIBREVILLE</span>
                                     <br/>
                                     <span style="font-weight: bold; display: block; text-align: center;">MONDJOT NZOUBA NDAMA</span>
                                 </div>
