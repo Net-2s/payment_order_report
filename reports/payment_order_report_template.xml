@@ -21,7 +21,7 @@
                </div>
             </div>
             <div t-attf-class="article o_report_layout_standard"
-                 style="position:absolute;top: 45px; border-bottom: 2px solid red; border-left: 2px solid red; border-right: 2px solid red;">
+                 style="position:absolute;top: 200px; border-bottom: 2px solid red; border-left: 2px solid red; border-right: 2px solid red;">
                 <t t-out="0"/>
                 <div class="body"
                      style="font-family: 'Open Sans', sans-serif;font-size: 14px;">
@@ -166,6 +166,7 @@
                                     <span style="font-weight: bold; display: block; text-align: center;">LE DIRECTEUR FINANCIER</span>
                                     <br/>
                                     <br/>
+                                    <br/>
                                     <span style="font-weight: bold; display: block; text-align: center;">Steffen Martin BONGO MBOU</span>
                                 </div>
                             </td>
@@ -175,6 +176,7 @@
                                     <span style="font-weight: bold; display: block; text-align: center;">LE DIRECTEUR GENERAL</span>
                                     <br/>
                                     <br/>
+                                    <br/>
                                     <span style="font-weight: bold; display: block; text-align: center;">DR.M.T.VANE NDONG OBIANG</span>
                                 </div>
                             </td>
@@ -182,7 +184,7 @@
                         <tr>
                             <td style="border-top: 2px solid red; height: 80px;">
                                 <div class="" style="">
-                                    <span style="margin: 15px; font-weight: bold;">Visé le:</span>
+                                    <span style="margin: 15px; font-weight: bold;">Visé le:</span><br/>
                                     <span style="font-weight: bold; display: block; text-align: center;">LE CONTROLEUR BUDGETAIRE DES HOPITAUX PUBLICS DE LIBREVILLE</span>
                                     <br/>
                                     <br/>
@@ -194,6 +196,7 @@
                                     <span style="margin: 15px;">Fait à Libreville le:</span>
                                     <br/>
                                     <span style="margin: 15px;">Par:</span>
+                                    <br/>
                                     <br/>
                                     <span style="font-weight: bold; display: block; text-align: center;">L'AGENT COMPTABLE DES HOPITAUX PUBLICS DE LIBREVILLE</span>
                                     <br/>
@@ -215,4 +218,5 @@
             </t>
         </t>
     </template>
+
 </odoo>
